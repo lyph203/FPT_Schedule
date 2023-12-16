@@ -1,0 +1,190 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Jul 5, 2023, 9:26:09 AM
+    Author     : Pham Huong Ly
+*/
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: white;
+}
+
+button{
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.sidebar{
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 100%;
+    background: #216ce7;
+    transition: 0.4s;
+}
+
+body.open .sidebar{
+    width: 200px;
+}
+
+.sidebar-inner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+}
+
+.sidebar-header{
+    display: flex;
+    align-items: center;
+    height: 68px;
+    padding: 0 1.25rem 0 0;
+    background: rgba(0, 0, 0, 0.1);
+    border-left: 3px solid transparent;
+    transition: all 0.4s;
+}
+
+.sidebar-header:hover{
+    border-left: 3px solid #bdbdbd;
+}
+
+.sidebar-burger{
+    width: 70px;
+    height: 70px;
+    display: grid;
+    place-items: center;
+}
+
+.sidebar-burger > i, body.open .sidebar-burger > i{
+    font-size: 25px;
+    color: #f9f9f9;
+    transition: all 0.4s;
+}
+
+.sidebar-burger:hover > i, body.open .sidebar-burger:hover > i{
+    color: #bdbdbd;
+}
+
+.sidebar-logo{
+    height: 30px;
+    opacity: 0;
+    transition: all 0.4s;
+    margin: 20px;
+}
+
+body.open .sidebar-logo{
+    opacity: 1;
+    transition: all 0.4s;
+}
+
+.sidebar-menu{
+    display: grid;
+}
+
+.sidebar-menu > a{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    height: 55px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1;
+    padding: 0 22px;
+    border-left: 3px solid transparent;
+    transition: all 0.4s;
+    text-decoration: none;
+}
+
+.sidebar-menu > a:hover{
+    border-left: 3px solid #f9f9f9;
+}
+
+.sidebar-menu > a.has-border{
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    margin-bottom: 1rem;
+}
+
+.sidebar-menu > a > i{
+    font-size: 25px;
+    color: #f9f9f9;
+    transition: all 0.4s;
+}
+
+.sidebar-menu > a:hover > i, .sidebar-menu > a:hover > span{
+    color: #bdbdbd;
+}
+
+.sidebar-menu > a > span{
+    color: #f9f9f9;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+body.open .sidebar-menu > a > span{
+    opacity: 1;
+    transition: all 0.4s;
+}
+
+.userInf{
+    width: 230px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px 2px lightgray;
+    padding: 15px;
+    margin-left: 230px;
+    margin-top: 20px;
+}
+
+.information {
+    margin-left: 80px;
+    display: flex;
+}
+
+.information ul{
+    margin-left: 110px;
+}
+
+.information li{
+    list-style: none;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px 2px lightgray;
+    margin: 40px 0;
+}
+
+.information a{
+    text-decoration: none;
+    color: #216ce7;
+}
+
+.information a:hover{
+    color: #bdbdbd;
+}
+
+.footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:50px;
+    text-align: center;
+    align-items: center;
+}
+
+.footer p{
+    margin: 0 auto;
+    text-align: center;
+    color: black;
+    vertical-align: top;
+}
